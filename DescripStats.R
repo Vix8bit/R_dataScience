@@ -20,3 +20,17 @@ boxplot(airquality$Wind,main="Boxplot")
 
 barplot(airquality$Ozone,main ="Ozone Concenteration in air",
         ylab = "ozone levels", col ='blue', horiz = T, axes = T)
+eq<-datasets::quakes
+View(eq)
+quakes[,c(1,2)]
+summary(quakes)
+summary(quakes$long)
+
+par(mfrow =c(3,3),mar=(2,5,2,1), las=0,bty="0")
+plot(airquality$Ozone)
+plot(airquality$Ozone,airquality$Wind)
+plot(airquality$Ozone,type = "l")
+plot(airquality$Temp,airquality$Wind,type = "p")
+plot(airquality)
+barplot(airquality$Ozone,main ="Ozone Concenteration in air",
+        ylab = "ozone levels", col ='blue', horiz = T, axes = T)
